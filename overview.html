@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přehled - Geoinformatika</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили для изображений справа */
+        .image-right {
+            float: right; /* Размещаем контейнер справа */
+            width: 30%; /* Задаём ширину для блока изображений */
+            margin-left: 20px; /* Отступ от текста слева */
+        }
+        .image-right img {
+            width: 100%; /* Изображения занимают всю ширину контейнера */
+            height: auto; /* Сохраняем пропорции */
+            margin-bottom: 15px; /* Отступ между изображениями */
+            border-radius: 8px; /* Скругляем углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+        }
+        .image-right p {
+            text-align: center; /* Центрируем подписи */
+            font-size: 0.9rem; /* Небольшой размер текста */
+            color: #555; /* Цвет текста */
+            font-style: italic; /* Курсив для подписей */
+            margin-bottom: 20px; /* Отступ под каждой подписью */
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер с навигацией -->
+    <header>
+        <h1>Geoinformatika</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="overview.html" class="active">Přehled</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="contact.html">Další informace</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Блок с текстом -->
+        <div>
+            <!-- Блок изображений справа -->
+            <div class="image-right">
+                <a href="images/maps.jpg" data-lightbox="gallery" data-title="Digitální mapy: propojení prostoru a dat">
+					<img src="images/maps.jpg" alt="Digitální mapy">
+				</a>
+				<p>Digitální mapy: propojení prostoru a dat</p>
+
+                <a href="images/cycle.png" data-lightbox="gallery" data-title="Využití GIS v jednotlivých fázích projektů">
+					<img src="images/cycle.png" alt="Využití GIS v jednotlivých fázích projektů">
+				</a>
+				<p>Využití GIS v jednotlivých fázích projektů</p>
+				
+				<a href="images/vrstvy.jpg" data-lightbox="gallery" data-title="Vícevrstvý model geografických dat: Vizualizace GIS analýzy">
+					<img src="images/vrstvy.jpg" alt="Vícevrstvý model geografických dat: Vizualizace GIS analýzy">
+				</a>
+				<p>Vícevrstvý model geografických dat: Vizualizace GIS analýzy</p>
+			</div>
+			
+            <!-- Заголовок страницы -->
+            <h2>Co je geoinformatika?</h2>
+
+            <!-- Раздел 1: Definice -->
+            <section>
+                <h3>Definice geoinformatiky</h3>
+				 <div class="gif-container">
+					<img src="images/history-geoinformatics.gif" alt="Historie geoinformatiky" class="responsive">
+					<p class="gif-text">Historie geoinformatiky a její význam v dnešním světě</p>
+				</div>			
+                <p>
+                    Geoinformatika je vědecký obor, který propojuje geografii, informatiku a analýzu prostorových dat.
+                    Díky těmto technologiím jsme schopni lépe pochopit, jak funguje svět kolem nás.
+                </p>
+                <p>
+                    Geoinformatika zahrnuje práci s digitálními mapami, analýzu satelitních snímků a vytváření prostorových
+                    modelů, které pomáhají při plánování, analýze a rozhodování.
+                </p>
+            </section>
+
+            <!-- Раздел 2: Jak geoinformatika mění svět -->
+            <section>
+                <h3>Jak geoinformatika mění svět?</h3>
+                <p>
+                    Geoinformatika nachází uplatnění v různých oblastech života. Zde je několik příkladů:
+                </p>
+                <ul>
+                    <li><strong>Urbanismus:</strong> Pomáhá plánovat městské čtvrti a dopravu.</li>
+                    <li><strong>Životní prostředí:</strong> Monitoruje změny krajiny a klimatické změny.</li>
+                    <li><strong>Zemědělství:</strong> Optimalizuje využití půdy a sleduje zdraví plodin.</li>
+                    <li><strong>Doprava:</strong> Umožňuje efektivnější plánování tras a analýzu dopravních toků.</li>
+                </ul>
+            </section>
+
+            <!-- Раздел 3: Přínosy geoinformatiky -->
+            <section>
+                <h3>Přínosy geoinformatiky</h3>
+                <p>
+                    Geoinformatika má mnoho výhod, díky kterým je klíčová pro moderní svět:
+                </p>
+                <ol>
+                    <li>Pomáhá efektivně využívat zdroje.</li>
+                    <li>Zlepšuje schopnost reagovat na přírodní katastrofy.</li>
+                    <li>Poskytuje přesné a aktuální informace o prostoru.</li>
+                    <li>Podporuje udržitelné plánování a rozhodování.</li>
+                </ol>
+            </section>
+
+            <!-- Изображение или гифка -->
+            
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 Geoinformatika. Všechna práva vyhrazena.</p>
+    </footer>
+
+
+
+</body>
+</html>

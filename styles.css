@@ -1,0 +1,489 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Контроль размеров элемента с учетом отступов */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Светло-серый фон */
+    color: #333; /* Тёмный текст для хорошей читаемости */
+    overflow-x: hidden; /* Убираем горизонтальный скроллинг */
+}
+
+/* Хедер */
+header {
+    background-color: #2E8B57; /* Природный зелёный (Sea Green) */
+    color: white;
+    padding: 20px; /* Увеличим отступ для большего пространства */
+    text-align: center; /* Центрируем заголовок */
+    width: 100%; /* Убедимся, что хедер занимает всю ширину */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Используем Flexbox для горизонтального размещения */
+    justify-content: center; /* Центрируем пункты меню */
+    gap: 20px; /* Пространство между пунктами меню */
+}
+
+header nav ul li {
+    display: inline-block; /* Оставляем блочное расположение для Flexbox */
+}
+
+header nav ul li a {
+    color: #F0FFF0; /* Светло-зелёный цвет текста (Honeydew) */
+    text-decoration: none;
+    font-size: 1rem; /* Увеличим размер шрифта */
+    font-weight: bold; /* Сделаем текст жирным */
+    transition: color 0.3s ease; /* Добавим плавный переход цвета при наведении */
+}
+
+header nav ul li a:hover {
+    color: #FFD700; /* Золотистый цвет при наведении (Goldenrod) */
+}
+
+/* Основной контент */
+main {
+    padding: 40px 20px; /* Увеличим вертикальный отступ для удобства чтения */
+    line-height: 1.6; /* Добавим интерлиньяж для читаемости текста */
+    max-width: 1200px; /* Ограничим ширину контента */
+    margin: 20px auto; /* Центрируем основной блок с отступом сверху и снизу */
+    background-color: white; /* Белый фон для контента */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для эффекта "карточки" */
+    border-radius: 8px; /* Скруглим углы */
+}
+
+/* Футер */
+footer {
+    background-color: #2E8B57; /* Природный зелёный */
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    position: relative; /* Сделаем относительным, чтобы не мешал содержимому */
+    width: 100%; /* Убедимся, что футер занимает всю ширину */
+    font-size: 0.9rem;
+}
+
+/* Адаптация изображений */
+.responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Лёгкое скругление углов изображений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для изображений */
+}
+
+/* Дополнительные стили для кнопок */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57; /* Природный зелёный */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный эффект при наведении */
+}
+
+button:hover {
+    background-color: #1E6B43; /* Темно-зелёный при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+/* Галерея (для изображений в строку) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Расстояние между изображениями */
+    justify-content: center; /* Центрируем изображения */
+    text-align: center;
+}
+
+.gallery img {
+    max-width: 300px; /* Ограничим ширину изображений */
+    border-radius: 8px; /* Скруглённые углы */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Увеличение изображения */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Сильная тень при наведении */
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-wrap: wrap; /* Переносим пункты меню на новую строку, если не помещаются */
+    }
+
+    header nav ul li {
+        margin-bottom: 10px; /* Добавим отступ между строками в маленьком меню */
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .gallery img {
+        max-width: 100%; /* На маленьких экранах изображения занимают всю ширину */
+    }
+}
+/* Стили для видео */
+video {
+    max-width: 100%; /* Убедимся, что видео не превышает ширину контейнера */
+    height: auto; /* Сохраняем пропорции видео */
+    display: block; /* Убираем лишние отступы (если они есть) */
+    margin: 20px auto; /* Центрируем видео с отступами сверху и снизу */
+    border-radius: 8px; /* (Опционально) Скруглим углы видео */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (Опционально) Добавим тень */
+}
+/* Введение (Приветствие) */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #2E8B57;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Секция "О сайте" */
+.about {
+    margin-bottom: 40px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h3 {
+    color: #2E8B57;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Карточки с разделами */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    color: #2E8B57;
+}
+
+.card a {
+    text-decoration: none;
+    color: #2E8B57;
+}
+
+.card a:hover {
+    color: #FFD700;
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Секция с кнопкой (CTA) */
+.cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta h3 {
+    font-size: 1.5rem;
+    color: #2E8B57;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.cta button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta button:hover {
+    background-color: #1E6B43;
+    transform: scale(1.05);
+}
+
+/* --- Кнопка с анимацией при наведении --- */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #2E8B57; /* Природный зелёный */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавная смена цвета и увеличение */
+}
+
+button:hover {
+    background-color: #1E6B43; /* Темно-зелёный при наведении */
+    transform: scale(1.1); /* Увеличение кнопки */
+}
+
+/* --- Анимация появления заголовков --- */
+.intro h2, .about h3, .sections h3, .cta h3 {
+    opacity: 0; /* Изначально заголовки невидимы */
+    transform: translateY(-20px); /* Смещены вверх */
+    animation: fadeIn 1s ease-out forwards; /* Анимация появления */
+}
+
+/* Задержки для разных секций */
+.about h3 {
+    animation-delay: 0.5s; /* Появляется через 0.5 секунды */
+}
+
+.sections h3 {
+    animation-delay: 0.8s;
+}
+
+.cta h3 {
+    animation-delay: 1s;
+}
+
+/* --- Анимация карточек при наведении --- */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавное изменение при наведении */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Увеличение карточки */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более глубокая тень */
+}
+
+/* --- Ключевая анимация fadeIn --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Исходная позиция - смещение вверх */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Конечная позиция */
+    }
+}
+/* Для активной ссылки в меню */
+nav ul li a.active {
+    color: #FFD700; /* Золотистый цвет для активной ссылки */
+    text-decoration: underline;
+}
+
+/* Для разделов на странице Přehled */
+main section {
+    margin-bottom: 40px;
+}
+
+main section h3 {
+    color: #2E8B57; /* Природный зелёный */
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+main section p, main section ul, main section ol {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Стили для списков */
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+ol {
+    margin-left: 20px;
+    list-style-type: decimal;
+}
+
+/* Секция с изображением или гифкой */
+.image-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section .gif-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
+/* Контейнер для двух колонок */
+.content-container {
+    display: flex; /* Flexbox для расположения колонок */
+    gap: 20px; /* Расстояние между колонками */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    margin-top: 20px;
+}
+
+/* Левая колонка: текст */
+.text-column {
+    flex: 2; /* Занимает больше пространства */
+    line-height: 1.6; /* Удобное чтение текста */
+}
+
+/* Правая колонка: изображения */
+.image-column {
+    flex: 1; /* Занимает меньше пространства */
+    text-align: center; /* Центрирование содержимого */
+}
+
+/* Изображения */
+.image-column img {
+    max-width: 100%; /* Ограничиваем ширину изображений */
+    height: auto;
+    border-radius: 8px; /* Скругляем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    margin-bottom: 10px;
+}
+
+/* Подписи к изображениям */
+.image-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    font-style: italic;
+}
+.image-right img {
+    width: 100%; /* Изображения занимают всю ширину контейнера */
+    height: auto; /* Сохраняют пропорции */
+    border-radius: 8px; /* Скруглённые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    transition: transform 0.3s ease; /* Плавный эффект увеличения */
+}
+
+.image-right img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+
+<div class="image-right">
+    <img src="images/cycle.png" alt="Kompletní životní cyklus GIS">
+    <p>Kompletní životní cyklus GIS</p>
+
+    <img src="images/maps.png" alt="Digitální mapy">
+    <p>Digitální mapy: propojení prostoru a dat</p>
+	
+</div>
+
+h2 {
+    margin-bottom: 20px; /* Увеличить отступ под заголовком */
+}
+
+h3 {
+    margin-top: 20px; /* Увеличить отступ сверху подзаголовка */
+}
+
+.gif-container {
+    text-align: left; /* Центрирование гифки */
+    margin-bottom: 20px; /* Отступ под гифкой */
+}
+
+.gif-container img {
+    max-width: 60%; /* Ограничение ширины гифки */
+    height: auto;
+    border-radius: 8px; /* Скруглённые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+	
+}
+
+.gif-container .gif-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.image-maps {
+    margin-top: 30px; /* Отступ сверху для первого изображения */
+}
+
+.text-maps {
+    margin-top: 10px; /* Отступ текста от изображения */
+}
+
+.image-cycle {
+    margin-top: 500px; /* Отступ сверху для второго изображения */
+}
+
+.text-cycle {
+    margin-top: 5px; /* Отступ текста от изображения */
+}
+
+.image-vrstvy {
+	margin-top: 1000px;
+}
+.text-vrstvy {
+	margin-top: 10px;
+}
+figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic; /* Делает текст курсивом */
+}
+

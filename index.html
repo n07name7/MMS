@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoinformatika - Domů</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Хедер с навигацией -->
+    <header>
+        <h1>Geoinformatika</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="overview.html">Přehled</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="contact.html">Další informace</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Приветственная секция -->
+        <section class="intro">
+            <h2>Vítejte v multimediálním systému o geoinformatice!</h2>
+            <p>
+                Tento web vám představí, jak geoinformatika pomáhá analyzovat, vizualizovat a interpretovat prostorová data. Prozkoumejte ukázky map, interaktivních vizualizací a užitečných odkazů, které vám ukážou možnosti moderního mapování a datových analýz.
+            </p>
+
+            <!-- Кнопка для воспроизведения приветственного аудио -->
+            <button onclick="playWelcome()" style="margin-top: 20px;">Přehrát uvítání</button>
+            <audio id="welcome-audio" src="audio/welcome.mp3"></audio>
+        </section>
+
+        <!-- Секция "О сайте" -->
+        <section class="about">
+            <h3>O čem je tento systém?</h3>
+            <p>
+                Tento web je věnován geoinformatice – oboru, který propojuje geografii, data a moderní technologie. Najdete zde přehled základních principů geoinformatiky, ukázky map, interaktivní vizualizace a užitečné odkazy pro práci s prostorovými daty. Objevte, jak geoinformační systémy pomáhají analyzovat a vizualizovat svět kolem nás!
+            </p>
+        </section>
+
+        <!-- Секция с основными разделами -->
+        <section class="sections">
+            <h3>Co zde najdete:</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4><a href="overview.html">Přehled</a></h4>
+                    <p>Základní informace o geoinformatice a jejím významu.</p>
+                </div>
+                <div class="card">
+                    <h4><a href="gallery.html">Galerie</a></h4>
+                    <p>Ukázky map vytvořených s využitím GIS a otevřených dat.</p>
+                </div>
+                <div class="card">
+                    <h4><a href="video.html">Video</a></h4>
+                    <p>Vysvětlení, co je GIS a jak funguje.</p>
+                </div>
+                <div class="card">
+                    <h4><a href="contact.html">Další informace</a></h4>
+                    <p>Užitečné odkazy na zdroje dat a školicí materiály pro mapování.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дополнительная секция с кнопкой -->
+        <section class="cta">
+            <h3>Začněte své dobrodružství!</h3>
+            <p>Prozkoumejte fascinující svět geoinformatiky. Klikněte na tlačítko níže a začněte.</p>
+            <button onclick="location.href='overview.html'">Zjistit více</button>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 Geoinformatika. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <!-- JavaScript для воспроизведения аудио -->
+    <script>
+        function playWelcome() {
+            const audio = document.getElementById('welcome-audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

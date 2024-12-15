@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Další informace - Geoinformatika</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Добавляем стили для контейнера */
+        .content-container {
+            display: flex; /* Flexbox для размещения блоков в ряд */
+            gap: 20px; /* Расстояние между блоками */
+            align-items: flex-start; /* Выравнивание по верхнему краю */
+            margin: 20px 0;
+        }
+
+        .text-section {
+            flex: 1; /* Текстовая область занимает больше места */
+            line-height: 1.6;
+        }
+
+        .gif-section {
+            flex: 1; /* Область с гифкой */
+            display: flex;
+            justify-content: center; /* Центрируем гифку */
+        }
+
+        .gif-section img {
+            max-width: 100%; /* Гифка адаптируется под ширину */
+            border-radius: 8px; /* Скруглённые углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Další informace</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="overview.html">Přehled</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="info.html" class="active">Další informace</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Užitečné odkazy</h2>
+            <!-- Контейнер с текстом и гифкой -->
+            <div class="content-container">
+                <!-- Левая колонка с текстом -->
+                <div class="text-section">
+                    <p>
+                        Na této stránce najdete odkazy na zdroje, které vám pomohou při práci s GIS a při hledání otevřených geografických dat.
+                    </p>
+                    <h3>Kurzy QGIS</h3>
+                    <p>
+                        <a href="https://www.qgistutorials.com/en/" target="_blank" style="color: #2E8B57; text-decoration: underline;">
+                        QGIS Tutorials</a> je skvělý zdroj, který nabízí širokou škálu materiálů pro studium možností QGIS. 
+                        Obsahuje praktické návody, které vás provedou od základů až po pokročilé funkce tohoto nástroje.
+                    </p>
+                    <h3>Otevřená geografická data</h3>
+                    <p>
+                        <a href="https://freegisdata.rtwilson.com/" target="_blank" style="color: #2E8B57; text-decoration: underline;">
+                        Free GIS Data</a> je webová stránka obsahující rozsáhlý seznam odkazů na různé portály s otevřenými geografickými daty.
+                        Tyto datové zdroje můžete využít při tvorbě map a dalších projektů.
+                    </p>
+                </div>
+
+                <!-- Правая колонка с гифкой -->
+                <div class="gif-section">
+                    <img src="images/planet.gif" alt="Zeme" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Geoinformatika</p>
+    </footer>
+</body>
+</html>

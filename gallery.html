@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Geoinformatika</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lightbox для увеличения изображений -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <style>
+        /* Улучшение текста */
+        p {
+            line-height: 1.6; /* Интерлиньяж */
+            margin-bottom: 15px; /* Отступ снизу */
+        }
+
+        /* Стили для интерактивной карты */
+        iframe {
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        /* Центрирование изображений и их подписи */
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galerie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="overview.html">Přehled</a></li>
+                <li><a href="gallery.html" class="active">Galerie</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="contact.html">Další informace</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Введение -->
+        <section>
+            <h2>Galerie mých vytvořených map</h2>
+           
+               
+            
+            <p>
+                Na této stránce jsou prezentovány tři mapy, které demonstrují praktické využití nástrojů geoinformatiky. První mapa vizualizuje délky ulic na území Ostravy podle jejich kategorií. Druhá, interaktivní mapa, umožňuje prozkoumat změny populace v jednotlivých regionech v období 2000–2020. Třetí mapa ukazuje vizualizaci dat digitálního modelu terénu (SRTM30m), který zobrazuje výškový profil krajiny.
+            </p>
+        </section>
+
+        <!-- Секция со статической картой -->
+        <section>
+            <h3>Prostorová data</h3>
+            <p>
+                Tato část ukazuje statické vizualizace prostorových dat, například mapu znázorňující rozložení ulic v Ostravě podle jejich délky.
+            </p>
+            <figure>
+                <a href="images/data1.png" data-lightbox="gallery" data-title="Rozložení ulic v Ostravě podle délky">
+                    <img src="images/data1.png" alt="Data 1" style="max-width: 800px; height: auto;">
+                </a>
+                <figcaption>
+                    Statická mapa: Rozložení ulic v Ostravě podle délky
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Секция с интерактивной картой -->
+        <section>
+            <h3>Interaktivní mapa</h3>
+            <p>
+                Prozkoumejte interaktivní mapu změny populace.
+            </p>
+            <div style="width: 100%; max-width: 800px; height: 600px; margin: 0 auto;">
+                <iframe 
+                    src="https://n07name7.github.io/population_change_map/" 
+                    style="width: 100%; height: 100%; border: none;">
+                </iframe>
+            </div>
+            <p style="text-align: center; font-size: 0.9rem; color: #555; margin-top: 10px; font-style: italic;">
+                Tato interaktivní mapa zobrazuje změny populace v regionech (2000 - 2020).
+            </p>
+            <p style="text-align: center; font-size: 0.9rem; color: #555; font-style: italic;">
+                Údaje byly získány z otevřených zdrojů Harvardovy univerzity. Všechny výpočty byly provedeny v QGIS. 
+                Webová mapa byla vytvořena pomocí pluginu <strong>qgis2web</strong>.
+            </p>
+        </section>
+		<section>
+    <h3>Digitální model terénu (SRTM30m)</h3>
+    <p>
+        Tato mapa vizualizuje data digitálního modelu terénu (SRTM30m) zobrazující profil reliéfu krajiny mého rodného města Valujki. Díky geoinformatickým nástrojům lze tato data prezentovat ve vizuálně atraktivní podobě, což usnadňuje jejich analýzu a interpretaci. Veškeré operace jsem prováděl v QGIS pomocí zásuvného modulu OpenTopography DEM downloader.
+    </p>
+    <figure>
+        <a href="images/srtm30m.png" data-lightbox="gallery" data-title="Digitální model terénu (SRTM30m)">
+            <img src="images/srtm30m.png" alt="Digitální model terénu (SRTM30m)" style="max-width: 800px; height: auto;">
+        </a>
+        <figcaption>
+            Vizualizace dat z SRTM30m
+        </figcaption>
+    </figure>
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Geoinformatika</p>
+    </footer>
+    <!-- Скрипт для Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
